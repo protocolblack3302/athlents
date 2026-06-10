@@ -1,0 +1,152 @@
+{
+  "sections": {
+    "brand-hero": {
+      "type": "rich-text",
+      "blocks": {
+        "heading-main": {
+          "type": "heading",
+          "settings": {
+            "heading": "New Drops. Stay Ready. 🔥",
+            "heading_size": "h0"
+          }
+        },
+        "text-main": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Athlents was built for those who refuse to choose between performance and style. We don't just make clothes — we build armour for athletes who live loud. From the track to the streets, every piece is engineered to move with you and turn heads while doing it. The next chapter is almost here. Bigger drops. Bolder designs. Built different. 🔥</p>"
+          }
+        },
+        "btn-main": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop What's Live Now",
+            "button_link": "shopify://collections/featured",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": ["heading-main", "text-main", "btn-main"],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "drops-label": {
+      "type": "rich-text",
+      "blocks": {
+        "heading-drops": {
+          "type": "heading",
+          "settings": {
+            "heading": "What's Dropping Next",
+            "heading_size": "h1"
+          }
+        },
+        "text-drops": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Four categories. All fire. Dropping soon — get on the list before everyone else does.</p>"
+          }
+        }
+      },
+      "block_order": ["heading-drops", "text-drops"],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 72,
+        "padding_bottom": 16
+      }
+    },
+    "drops-grid": {
+      "type": "multicolumn",
+      "blocks": {
+        "col-hoodies": {
+          "type": "column",
+          "settings": {
+            "title": "Hoodies 🧥",
+            "text": "<p>Premium-weight, oversized athletic hoodies. Built for all seasons. Designed for the streets. The kind you wear everywhere and never want to take off.</p>",
+            "link_label": "Coming Soon",
+            "link": "shopify://collections/hoodies"
+          }
+        },
+        "col-tshirts": {
+          "type": "column",
+          "settings": {
+            "title": "T-Shirts 👕",
+            "text": "<p>Bold graphics on heavyweight cotton. Clean cuts, premium feel, made for movement. Our tees carry the Athlents DNA from day one.</p>",
+            "link_label": "Coming Soon",
+            "link": "shopify://collections/t-shirts"
+          }
+        },
+        "col-winter": {
+          "type": "column",
+          "settings": {
+            "title": "Winter Collection ❄️",
+            "text": "<p>Cold weather doesn't stop athletes. Technical layers built for early morning runs, late-night sessions, and everything in between.</p>",
+            "link_label": "Coming Soon",
+            "link": "shopify://collections/winter-collection"
+          }
+        },
+        "col-pants": {
+          "type": "column",
+          "settings": {
+            "title": "Loose Fit Pants ✅",
+            "text": "<p>The piece that started it all. Wide-leg athletic fit, premium fabric, bold design. Available right now — don't sleep on it.</p>",
+            "link_label": "Shop Now →",
+            "link": "shopify://collections/loose-fit-pants"
+          }
+        }
+      },
+      "block_order": ["col-hoodies", "col-tshirts", "col-winter", "col-pants"],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_style": "outlined",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 80
+      }
+    },
+    "notify-cta": {
+      "type": "newsletter",
+      "blocks": {
+        "heading-notify": {
+          "type": "heading",
+          "settings": {
+            "heading": "Get Early Access 🔥"
+          }
+        },
+        "text-notify": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Drop alerts. Exclusive previews. Members-only launches. No spam — just fire.</p>"
+          }
+        },
+        "form-notify": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": ["heading-notify", "text-notify", "form-notify"],
+      "settings": {
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    }
+  },
+  "order": ["brand-hero", "drops-label", "drops-grid", "notify-cta"]
+}

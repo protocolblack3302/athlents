@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(shopify version *)",
+      "Bash(shopify theme *)",
+      "Bash(shopify --help)"
+    ]
+  }
+}

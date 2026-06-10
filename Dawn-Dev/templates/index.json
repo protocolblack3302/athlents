@@ -1,0 +1,105 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_ybUiXz": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_4rwt9L": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/927f581c579e57b937a4f9a5770d9045.webp",
+            "image_overlay_opacity": 50,
+            "heading": "Discover Your Style",
+            "heading_size": "h1",
+            "subheading": "<strong>Premium Streetwear & Trousers for the Modern Athlete</strong>",
+            "button_label": "Explore Collection",
+            "link": "shopify://collections/loose-fit-pants",
+            "button_style_secondary": false,
+            "show_text_box": true,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": "scheme-3"
+          }
+        },
+        "slide_bxUQkN": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/medium-shot-man-with-braids-portrait.jpg",
+            "image_overlay_opacity": 50,
+            "heading": "New Releases Dropping Soon",
+            "heading_size": "h2",
+            "subheading": "<strong>Exclusive designs. Athlete-first fit. Be ready for the drop.</strong>",
+            "button_label": "See What's Dropping",
+            "link": "shopify://pages/new-releases",
+            "button_style_secondary": false,
+            "show_text_box": true,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": "scheme-3"
+          }
+        }
+      },
+      "block_order": [
+        "slide_4rwt9L",
+        "slide_bxUQkN"
+      ],
+      "custom_css": [],
+      "name": "t:sections.slideshow.presets.name",
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "large",
+        "slider_visual": "dots",
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "image_behavior": "ambient",
+        "show_text_below": false,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "custom_css": [
+        ".card__badge .badge {background-color: #ffffff !important; color: #000000 !important; border: 1px solid #000000 !important; /* optional clean border */}"
+      ],
+      "settings": {
+        "collection": "featured",
+        "products_to_show": 8,
+        "title": "",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-1",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 72,
+        "padding_bottom": 80
+      }
+    }
+  },
+  "order": [
+    "slideshow_ybUiXz",
+    "featured_collection"
+  ]
+}

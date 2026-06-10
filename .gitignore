@@ -1,0 +1,11 @@
+# Shopify Dawn theme
+.DS_Store
+*.log
+node_modules/
+.shopify/
+.env
+.env.local
+*.tmp
+dist/
+build/
+.tmp/
