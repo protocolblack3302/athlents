@@ -1,0 +1,60 @@
+# Create a new collection
+mutation CollectionCreate($input: CollectionInput!) {
+  collectionCreate(input: $input) {
+    collection {
+      id
+      title
+      handle
+    }
+    userErrors {
+      field
+      message
+    }
+  }
+}
+
+# Update an existing collection
+mutation CollectionUpdate($input: CollectionInput!) {
+  collectionUpdate(input: $input) {
+    collection {
+      id
+      title
+      handle
+      descriptionHtml
+    }
+    userErrors {
+      field
+      message
+    }
+  }
+}
+
+# Add products to a collection
+mutation AddProductsToCollection($collectionId: ID!, $productIds: [ID!]!) {
+  collectionAddProductsV2(id: $collectionId, productIds: $productIds) {
+    collection {
+      id
+      title
+      productsCount
+    }
+    userErrors {
+      field
+      message
+    }
+  }
+}
+
+# Remove products from a collection
+mutation RemoveProductsFromCollection($collectionId: ID!, $productIds: [ID!]!) {
+  collectionRemoveProductsV2(id: $collectionId, productIds: $productIds) {
+    collection {
+      id
+      title
+      productsCount
+    }
+    userErrors {
+      field
+      message
+    }
+  }
+}

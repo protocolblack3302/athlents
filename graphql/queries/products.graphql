@@ -1,0 +1,83 @@
+# List all products (paginated)
+query Products($first: Int = 50, $after: String) {
+  products(first: $first, after: $after) {
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+    nodes {
+      id
+      title
+      handle
+      descriptionHtml
+      productType
+      vendor
+      status
+      totalInventory
+      priceRangeV2 {
+        minVariantPrice {
+          amount
+          currencyCode
+        }
+        maxVariantPrice {
+          amount
+          currencyCode
+        }
+      }
+      featuredImage {
+        url
+        altText
+      }
+      collections(first: 5) {
+        nodes {
+          id
+          title
+          handle
+        }
+      }
+    }
+  }
+}
+
+# Get a single product by handle
+query ProductByHandle($handle: String!) {
+  productByHandle(handle: $handle) {
+    id
+    title
+    handle
+    descriptionHtml
+    productType
+    vendor
+    status
+    totalInventory
+    priceRangeV2 {
+      minVariantPrice {
+        amount
+        currencyCode
+      }
+      maxVariantPrice {
+        amount
+        currencyCode
+      }
+    }
+    featuredImage {
+      url
+      altText
+    }
+    images(first: 10) {
+      nodes {
+        url
+        altText
+      }
+    }
+    variants(first: 10) {
+      nodes {
+        id
+        title
+        price
+        sku
+        inventoryQuantity
+      }
+    }
+  }
+}

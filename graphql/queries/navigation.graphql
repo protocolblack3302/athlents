@@ -1,0 +1,31 @@
+# Get main menu details
+query MainMenu {
+  menu(handle: "main-menu") {
+    id
+    title
+    handle
+    items {
+      id
+      title
+      url
+      type
+      resourceId
+    }
+  }
+}
+
+# Get footer menu details
+query FooterMenu {
+  menu(handle: "footer") {
+    id
+    title
+    handle
+    items {
+      id
+      title
+      url
+      type
+      resourceId
+    }
+  }
+}
