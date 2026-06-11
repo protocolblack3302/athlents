@@ -1,6 +1,6 @@
-# Get main menu details
+# Get main menu details (use menu ID, not handle)
 query MainMenu {
-  menu(handle: "main-menu") {
+  menu(id: "gid://shopify/Menu/232405631138") {
     id
     title
     handle
@@ -14,9 +14,9 @@ query MainMenu {
   }
 }
 
-# Get footer menu details
+# Get footer menu details (use menu ID, not handle)
 query FooterMenu {
-  menu(handle: "footer") {
+  menu(id: "gid://shopify/Menu/232405663906") {
     id
     title
     handle
