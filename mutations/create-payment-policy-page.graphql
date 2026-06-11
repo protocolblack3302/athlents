@@ -1,0 +1,20 @@
+mutation {
+  pageCreate(page: {
+    title: "Payment Policy",
+    handle: "payment-policy",
+    body: "<h2>Cash on Delivery (COD) &mdash; Advance Payment Required</h2><p>To ensure genuine orders and reduce delivery failures, all Cash on Delivery orders require a partial advance payment of <strong>&#8377;99</strong> at the time of placing the order.</p><ul><li>The remaining balance is paid directly to the delivery partner at the time of delivery.</li><li>The &#8377;99 advance is adjusted against your total order value &mdash; you are not paying extra.</li><li>If you cancel the order before it is shipped, the &#8377;99 advance will be refunded to your original payment method within 5&ndash;7 business days.</li><li>If you refuse delivery without a valid reason, the &#8377;99 advance is non-refundable.</li></ul><h2>Prepaid Orders</h2><p>Prepaid orders (UPI, card, net banking) receive priority processing and are shipped first. No advance is required.</p><h2>Other Payment Methods</h2><p>We accept all major payment methods including UPI (GPay, PhonePe, Paytm), credit/debit cards, and net banking, processed securely via PayU.</p><p>For any payment-related queries, contact us at <a href=\"mailto:support@athlents.com\">support@athlents.com</a> or call <a href=\"tel:+919997711635\">+91 99977 11635</a>.</p>",
+    isOnlineStorePreviewEnabled: true,
+    templateSuffix: ""
+  }) {
+    page {
+      id
+      title
+      handle
+      onlineStoreUrl
+    }
+    userErrors {
+      field
+      message
+    }
+  }
+}
