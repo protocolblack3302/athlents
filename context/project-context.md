@@ -104,8 +104,7 @@ mutation {
     { title: "T-Shirts", type: COLLECTION, resourceId: "gid://shopify/Collection/325812453538" },     # add when ready
     { title: "Winter Collection", type: COLLECTION, resourceId: "gid://shopify/Collection/325812584610" }, # add when ready
     { title: "About Us", type: PAGE, resourceId: "gid://shopify/Page/112820781218" },
-    { title: "Contact", type: PAGE, resourceId: "gid://shopify/Page/112741613730" },
-    { title: "Track Your Order", type: HTTP, url: "/apps/ils/tracking/" }
+    { title: "Contact", type: PAGE, resourceId: "gid://shopify/Page/112741613730" }
   ]) { menu { items { title url } } userErrors { field message } }
 }
 ```
@@ -119,7 +118,6 @@ mutation {
 - Loose Fit Pants → /collections/loose-fit-pants
 - About Us → /pages/about-us
 - Contact → /pages/contact
-- Track Your Order → /apps/ils/tracking/
 
 ### Footer menu (handle: footer, ID: gid://shopify/Menu/232405663906)
 - Privacy Policy
