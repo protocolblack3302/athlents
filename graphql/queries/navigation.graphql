@@ -1,0 +1,31 @@
+# Get main menu details (use menu ID, not handle)
+query MainMenu {
+  menu(id: "gid://shopify/Menu/232405631138") {
+    id
+    title
+    handle
+    items {
+      id
+      title
+      url
+      type
+      resourceId
+    }
+  }
+}
+
+# Get footer menu details (use menu ID, not handle)
+query FooterMenu {
+  menu(id: "gid://shopify/Menu/232405663906") {
+    id
+    title
+    handle
+    items {
+      id
+      title
+      url
+      type
+      resourceId
+    }
+  }
+}

@@ -1,0 +1,35 @@
+# Update a product
+mutation ProductUpdate($input: ProductInput!) {
+  productUpdate(input: $input) {
+    product {
+      id
+      title
+      handle
+      descriptionHtml
+      status
+    }
+    userErrors {
+      field
+      message
+    }
+  }
+}
+
+# Publish a product to the online store
+mutation PublishProduct($id: ID!) {
+  publishablePublish(
+    id: $id
+    input: { publicationId: "gid://shopify/Publication/174651146402" }
+  ) {
+    publishable {
+      ... on Product {
+        id
+        title
+      }
+    }
+    userErrors {
+      field
+      message
+    }
+  }
+}

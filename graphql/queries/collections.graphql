@@ -1,0 +1,52 @@
+# List all collections (paginated)
+query Collections($first: Int = 50, $after: String) {
+  collections(first: $first, after: $after) {
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+    nodes {
+      id
+      title
+      handle
+      descriptionHtml
+      productsCount
+      image {
+        url
+        altText
+      }
+    }
+  }
+}
+
+# Get a single collection by handle
+query CollectionByHandle($handle: String!) {
+  collectionByHandle(handle: $handle) {
+    id
+    title
+    handle
+    descriptionHtml
+    productsCount
+    image {
+      url
+      altText
+    }
+    products(first: 50) {
+      nodes {
+        id
+        title
+        handle
+        priceRangeV2 {
+          minVariantPrice {
+            amount
+            currencyCode
+          }
+        }
+        featuredImage {
+          url
+          altText
+        }
+      }
+    }
+  }
+}

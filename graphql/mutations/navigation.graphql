@@ -1,0 +1,45 @@
+# Update the main menu
+mutation UpdateMainMenu($items: [MenuItemInputType!]!) {
+  menuUpdate(
+    id: "gid://shopify/Menu/232405631138"
+    title: "Main menu"
+    items: $items
+  ) {
+    menu {
+      id
+      title
+      items {
+        title
+        url
+        type
+      }
+    }
+    userErrors {
+      field
+      message
+    }
+  }
+}
+
+# Update the footer menu
+mutation UpdateFooterMenu($items: [MenuItemInputType!]!) {
+  menuUpdate(
+    id: "gid://shopify/Menu/232405663906"
+    title: "Footer menu"
+    items: $items
+  ) {
+    menu {
+      id
+      title
+      items {
+        title
+        url
+        type
+      }
+    }
+    userErrors {
+      field
+      message
+    }
+  }
+}

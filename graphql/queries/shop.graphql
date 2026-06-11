@@ -1,0 +1,13 @@
+query {
+  shop {
+    name
+    id
+    email
+    url
+    myshopifyDomain
+    primaryDomain {
+      url
+      host
+    }
+  }
+}
