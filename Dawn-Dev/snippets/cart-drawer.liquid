@@ -63,13 +63,6 @@
       {%- endif -%}
       <div class="drawer__header">
         <h2 class="drawer__heading">{{ 'sections.cart.title' | t }}</h2>
-        {%- if cart != empty -%}
-          <button
-            type="button"
-            class="cart-clear-btn"
-            onclick="fetch('/cart/clear.js',{method:'POST'}).then(()=>location.reload())"
-          >Clear cart</button>
-        {%- endif -%}
         <button
           class="drawer__close"
           type="button"
@@ -316,7 +309,7 @@
                                     value="{{ item.quantity }}"
                                     {% # theme-check-disable %}
                                     data-cart-quantity="{{ cart | item_count_for_variant: item.variant.id }}"
-                                    min="0"
+                                    min="{{ item.variant.quantity_rule.min }}"
                                     data-min="{{ item.variant.quantity_rule.min }}"
                                     {% if item.variant.quantity_rule.max != null %}
                                       max="{{ item.variant.quantity_rule.max }}"
@@ -556,6 +549,13 @@
           >
             {{ 'sections.cart.checkout' | t }}
           </button>
+          {%- if cart != empty -%}
+            <button
+              type="button"
+              class="cart-clear-btn cart-clear-btn--footer"
+              onclick="fetch('/cart/clear.js',{method:'POST'}).then(()=>location.reload())"
+            >Clear cart</button>
+          {%- endif -%}
         </div>
       </div>
     </div>
