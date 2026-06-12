@@ -415,7 +415,12 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
   }
 }
 
-/* Athlents: clear cart button — same size as checkout button */
+/* Athlents: force drawer CTAs to always stack, never flex side-by-side */
+.cart-drawer .cart__ctas {
+  display: block !important;
+}
+
+/* Athlents: clear cart button — full width, same height as checkout */
 .cart-clear-btn--footer {
   display: block;
   width: 100%;
@@ -432,6 +437,7 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
   text-align: center;
   letter-spacing: 0.1rem;
   transition: border-color 0.2s, color 0.2s;
+  box-sizing: border-box;
 }
 
 .cart-clear-btn--footer:hover {
