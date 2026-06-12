@@ -3602,3 +3602,38 @@ details-disclosure > details {
   color: #ffffff !important;
   border-color: transparent !important;
 }
+
+/* Athlents: product grid — CSS Grid override at all breakpoints
+   Bypasses Dawn's flexbox width conflicts entirely.
+   mobile < 750px    → 2 cols
+   tablet 750–1279px → 3 cols
+   large 1280px+     → 4 cols
+*/
+.product-grid.grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  column-gap: var(--grid-mobile-horizontal-spacing) !important;
+  row-gap: var(--grid-mobile-vertical-spacing) !important;
+}
+
+.product-grid.grid > .grid__item {
+  width: auto !important;
+  max-width: none !important;
+  flex: none !important;
+}
+
+@media screen and (min-width: 750px) and (max-width: 1279px) {
+  .product-grid.grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    column-gap: var(--grid-desktop-horizontal-spacing) !important;
+    row-gap: var(--grid-desktop-vertical-spacing) !important;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .product-grid.grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+    column-gap: var(--grid-desktop-horizontal-spacing) !important;
+    row-gap: var(--grid-desktop-vertical-spacing) !important;
+  }
+}
