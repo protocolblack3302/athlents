@@ -313,7 +313,9 @@ cart-drawer-items {
   justify-content: space-between;
 }
 
+.cart-drawer .totals__total-value,
 .cart-drawer .price {
+  white-space: nowrap;
   line-height: 1;
 }
 

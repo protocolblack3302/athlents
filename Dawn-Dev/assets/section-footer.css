@@ -476,6 +476,52 @@
     padding: 0;
   }
 }
+
+/* Athlents: footer grid overrides */
+
+/* Desktop: brand wider, link columns compact — no empty 4th-column gap */
+@media screen and (min-width: 750px) {
+  .footer__blocks-wrapper {
+    display: grid !important;
+    grid-template-columns: 2fr 1fr 1fr !important;
+    column-gap: 4rem;
+  }
+
+  .footer__blocks-wrapper .footer-block {
+    width: auto !important;
+    max-width: none !important;
+  }
+}
+
+/* Mobile: brand full-width, Quick Links + Help side by side */
+@media screen and (max-width: 749px) {
+  .footer__blocks-wrapper {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    row-gap: 0;
+  }
+
+  /* Brand block spans both columns */
+  .footer__blocks-wrapper .footer-block:not(.footer-block--menu) {
+    grid-column: 1 / -1 !important;
+    width: auto !important;
+  }
+
+  /* Menu blocks each take one column */
+  .footer__blocks-wrapper .footer-block--menu {
+    width: auto !important;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-sizing: border-box;
+    padding-right: 1rem;
+  }
+}
+
+/* Athlents: larger Instagram icon in footer */
+.footer-block .list-social__item .icon {
+  height: 3rem;
+  width: 3rem;
+}
 @keyframes animateLocalization {
   0% {
     opacity: 0;

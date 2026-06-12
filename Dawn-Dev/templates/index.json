@@ -16,7 +16,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/927f581c579e57b937a4f9a5770d9045.webp",
-            "image_overlay_opacity": 50,
+            "image_overlay_opacity": 40,
             "heading": "Discover Your Style",
             "heading_size": "h1",
             "subheading": "<strong>Premium Streetwear & Trousers for the Modern Athlete</strong>",
@@ -34,7 +34,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/medium-shot-man-with-braids-portrait.jpg",
-            "image_overlay_opacity": 50,
+            "image_overlay_opacity": 40,
             "heading": "New Releases Dropping Soon",
             "heading_size": "h1",
             "subheading": "<strong>Exclusive designs. Athlete-first fit. Be ready for the drop.</strong>",
@@ -57,11 +57,11 @@
       "name": "t:sections.slideshow.presets.name",
       "settings": {
         "layout": "full_bleed",
-        "slide_height": "large",
+        "slide_height": "medium",
         "slider_visual": "dots",
         "auto_rotate": true,
         "change_slides_speed": 5,
-        "image_behavior": "ambient",
+        "image_behavior": "none",
         "show_text_below": false,
         "accessibility_info": "Slideshow about our brand"
       }
@@ -75,7 +75,7 @@
         "collection": "featured",
         "products_to_show": 8,
         "title": "The Collection",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "description": "",
         "show_description": false,
         "description_style": "body",
@@ -92,9 +92,9 @@
         "show_rating": true,
         "quick_add": "standard",
         "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 72,
-        "padding_bottom": 80
+        "swipe_on_mobile": true,
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     }
   },

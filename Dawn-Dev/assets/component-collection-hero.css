@@ -96,3 +96,8 @@
     min-height: 20rem;
   }
 }
+
+/* Athlents: compact banner when no image/description */
+.collection-hero__title {
+  margin: 1.2rem 0;
+}
