@@ -60,6 +60,19 @@ class CartItems extends HTMLElement {
     const index = event.target.dataset.index;
     let message = '';
 
+    if (inputValue === 0) {
+      event.target.setCustomValidity('');
+      event.target.reportValidity();
+      this.updateQuantity(
+        index,
+        0,
+        event,
+        document.activeElement.getAttribute('name'),
+        event.target.dataset.quantityVariantId
+      );
+      return;
+    }
+
     if (inputValue < event.target.dataset.min) {
       message = window.quickOrderListStrings.min_error.replace('[min]', event.target.dataset.min);
     } else if (inputValue > parseInt(event.target.max)) {
