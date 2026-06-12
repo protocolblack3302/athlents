@@ -918,6 +918,12 @@ a.product__text {
   content: none;
 }
 
+@media screen and (max-width: 749px) {
+  .product--mobile-hide .thumbnail-list {
+    display: none !important;
+  }
+}
+
 @media screen and (min-width: 750px) {
   .product--stacked .thumbnail-list {
     display: none;

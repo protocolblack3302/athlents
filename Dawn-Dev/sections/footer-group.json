@@ -5,6 +5,12 @@
     "footer": {
       "type": "footer",
       "blocks": {
+        "brand": {
+          "type": "brand_information",
+          "settings": {
+            "show_social": true
+          }
+        },
         "quick-links": {
           "type": "link_list",
           "settings": {
@@ -20,13 +26,13 @@
           }
         }
       },
-      "block_order": ["quick-links", "help"],
+      "block_order": ["brand", "quick-links", "help"],
       "settings": {
         "color_scheme": "scheme-3",
         "newsletter_enable": true,
         "newsletter_heading": "<strong>Get Early Access to Drops</strong>",
         "enable_follow_on_shop": false,
-        "show_social": true,
+        "show_social": false,
         "enable_country_selector": false,
         "enable_language_selector": false,
         "payment_enable": true,
