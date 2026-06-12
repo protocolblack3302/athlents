@@ -97,7 +97,18 @@
   }
 }
 
-/* Athlents: compact banner when no image/description */
+/* Athlents: compact banner — minimal vertical space when no image/description */
 .collection-hero__title {
-  margin: 1.2rem 0;
+  margin: 0 !important;
+  padding: 1rem 0 0.8rem;
+}
+
+.collection-hero__inner {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.collection-hero {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
