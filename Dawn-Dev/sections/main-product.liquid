@@ -738,6 +738,41 @@
   </div>
 </product-info>
 
+{%- unless product.has_only_default_variant == false and product.variants.size > 1 -%}
+  {%- assign sticky_atc_simple = true -%}
+{%- endunless -%}
+
+<div class="sticky-atc-bar" id="sticky-atc-bar" aria-hidden="true">
+  <div class="sticky-atc-bar__inner page-width">
+    <span class="sticky-atc-bar__title">{{ product.title }}</span>
+    <form method="post" action="/cart/add" class="sticky-atc-bar__form">
+      <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+      <input type="hidden" name="quantity" value="1">
+      <button type="submit" class="sticky-atc-bar__btn button button--primary" {% unless product.selected_or_first_available_variant.available %}disabled{% endunless %}>
+        {%- if product.selected_or_first_available_variant.available -%}
+          {{ 'products.product.add_to_cart' | t }}
+        {%- else -%}
+          {{ 'products.product.sold_out' | t }}
+        {%- endif -%}
+      </button>
+    </form>
+  </div>
+</div>
+
+<script>
+  (function() {
+    var bar = document.getElementById('sticky-atc-bar');
+    var buyBtn = document.querySelector('#MainProduct-{{ section.id }} .product-form__submit');
+    if (!bar || !buyBtn) return;
+    var observer = new IntersectionObserver(function(entries) {
+      var visible = entries[0].isIntersecting;
+      bar.classList.toggle('sticky-atc-bar--visible', !visible);
+      bar.setAttribute('aria-hidden', visible ? 'true' : 'false');
+    }, { threshold: 0 });
+    observer.observe(buyBtn);
+  })();
+</script>
+
 {% schema %}
 {
   "name": "t:sections.main-product.name",
